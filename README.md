@@ -28,9 +28,7 @@ Features
 ✅ Modern dark UI with:
 
 configuration form
-
 "Test run now" button
-
 generated cron URL
 
 How it works
@@ -40,28 +38,20 @@ You point the tool to your main feed (XML or CSV).
 You configure:
 
 target supplemental file path
-
 daysOffset (how many days in the future)
-
 base shop URL
 
 On each run (cronjob or Test Run button), the tool:
 
 reads the source feed (XML → CSV fallback)
-
 extracts id and availability
-
 skips any product with availability = in stock
-
 sets availability to existing value
 (or falls back to preorder if empty)
-
 writes a supplemental RSS feed with:
 
 g:id
-
 g:availability
-
 g:availability_date = today + N days (UTC)
 
 You then upload/assign this file as supplemental feed in Google Merchant Center, linked by ID to your main feed.
@@ -69,34 +59,26 @@ You then upload/assign this file as supplemental feed in Google Merchant Center,
 Installation
 
 Copy feedlingo_availability_date_fixer.php to your web server (e.g. into /var/www/html/tools/).
-
 Make sure PHP (5.6 or higher) is available.
-
 Visit the script in your browser, e.g.:
-
 https://yourserver.com/tools/feedlingo_availability_date_fixer.php
 
 
 Fill out:
 
 Source feed (URL or local path, XML or CSV)
-
 Target file (local path, e.g. /var/www/html/feeds/availability_supplement.xml)
-
 Availability date offset (days)
-
 Shop base URL
 
 Click Save configuration.
 
 Use Test run now to generate the supplemental feed once and see the result message.
-
 Configure a cronjob (see below).
 
 Cron usage
 
 The tool shows your cron URL in the UI, e.g.:
-
 https://yourserver.com/tools/feedlingo_availability_date_fixer.php?run=1&secret=YOUR_SECRET
 
 
@@ -111,11 +93,8 @@ This runs every day at 05:00, regenerates the supplemental feed and writes a sho
 Requirements
 
 PHP 5.6+
-
 allow_url_fopen enabled if you use remote URLs as source feed
-
 XML/CSV file accessible by the script
-
 No database, no external APIs, no Composer.
 
 Usage (DE)
