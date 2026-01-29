@@ -1,3 +1,8 @@
+> ⚠ **Official original repository:**  
+> https://github.com/Feedlingo/Google-Shopping-Merchant-Center-Availability-Date-Fixer  
+>  
+> Copies of this project may exist. This repository is the canonical source maintained by the original author.
+
 # Google-Shopping / Merchant-Center availability_date fixer
 
 
